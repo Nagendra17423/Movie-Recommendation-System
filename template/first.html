@@ -1,0 +1,246 @@
+<!-- {% load static %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1-dist\css\fontawesome.min.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ h1{
+    background:linear-gradient(to top,#ffe838,#f5069d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1 {
+    font-size: 7rem;
+    font-family: 'bangers', sans-serif;
+    background: linear-gradient(to top, #ffe838, #f5069d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+}
+
+.landing-text h6 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+}
+
+
+
+img{
+    width:100%;
+}
+body{
+    background-image: url('{% static "moviesCollage1.jpg" %}');
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+    backdrop-filter:grayscale(0.3) opacity(0.5);
+    overflow:auto;
+    background-position: center;
+    
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  </style>
+
+
+    </style>
+</head>
+<body >
+    <center>
+<!-- <div style="height:200px">
+</div> -->
+<!-- <div class="landing-text">
+    <h1>Movies Recommender</h1>
+    <h6 >A Step Closer To Entertainment</h6>
+</div> -->
+
+<center>
+    <h1> <a href="movie" id="first" style="color:white;font-size:3rem" >Movie  Recommendation</a></h1>
+
+<div style="height:100px">
+
+</div>
+
+
+<h1><a href="user" id="second" style="color:white;font-size:3rem"  >User  Recommendation</a></h1>
+<div style="height:100px">
+
+</div>
+<h1> <a href="genere" id="third" style="color:white;font-size:3rem"  > Genre</a></h1>
+<div style="height:100px">
+
+</div>
+
+<!-- <h1> <a href="tag" id="third" style="color:white;font-size:3rem"  > Tag</a></h1>
+<div style="height:100px">
+
+</div> -->
+
+
+<h1> <a href="sat" id="second" style="color:white;font-size:3rem"  > Statistical Analysis</a></h1>
+<div style="height:100px">
+
+</div>
+</center>
+
+
+
+<!-- <h1><a href="user" id="second" style="color:white;font-size:3rem"  >User  Recommendation</a></h1>
+    <div style="height:100px">
+
+    </div>
+   <h1> <a href="genere" id="third" style="color:white;font-size:3rem"  > Genre</a></h1>
+    <div style="height:100px">
+
+    </div>
+   <h1> <a href="#" id="second" style="color:white;font-size:3rem"  > Statistical Analysis</a></h1>
+    <div style="height:100px">
+
+    </div> -->
+</center>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="tag1" method="post">
+        {% csrf_token %}
+        <center>
+            <h1>Tag</h1>
+      <div class="container">
+        <label for="uname"><b>Enter UserId</b></label><br>
+        <input type="text" placeholder="Enter Id" style="width:250px;height:30px" name="ident" required>
+        <!-- <input type="text" placeholder="Enter Rating" style="width:250px;height:30px" name="rat" required> -->
+        <br><button type="submit" style="border-radius: 15px;width:170px;"><center>submit</center></button>
+      </div>
+      </form>
+    </center>
+</body>
+</html>

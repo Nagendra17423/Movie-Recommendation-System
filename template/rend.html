@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'bootstrap-4.4.1-dist\css\fontawesome.min.css' %}">
+<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #4CAF50;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+</style>
+</head>
+<body >
+
+<center><h1>Similar Users</h1></center>
+{% for i,j in send %}
+
+<div class="warning">
+  <p>
+      <div>
+        <strong> <img src="{% static 'user.png' %}" height=60 width=60 />&nbsp;&nbsp;&nbsp; Genere : </strong> {{i}}</p>
+      </div>
+<p style="margin-left:60px;"><strong>UserId :&nbsp;&nbsp;&nbsp; </strong> {{j}}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
